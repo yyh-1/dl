@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="p">账号或密码错误，是否重新登录</div>
+        <button @click="handleClick()">重新登录</button>
+        <!-- <p>{{ list.title }}</p> -->
+    </div>
+
+    <script>
+        const vm = new Vue({
+            el:'#app',
+            methods: {
+                handleClick(){
+                    window.location.href = 'http://127.0.0.1:9999';
+                }
+            },
+        })
+    </script>
+
+    <style>
+        #app{
+            display: block;
+            position: absolute;
+            left: calc(50% - 120px);
+            top: calc(50% - 150px);
+            background-color: crimson;
+            padding: 20px 20px;
+        }
+        #app .p{
+            color: white;
+        }
+        #app button{
+            position: relative;
+            left: 80px;
+            margin-top: 20px;
+        }
+    </style>
+</body>
+</html>
